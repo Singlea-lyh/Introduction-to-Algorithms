@@ -1,0 +1,13 @@
+#循环线性查找问题
+
+#伪代码
+CycleLinfFind(A[], v)
+		for i = 1 to A.length
+		    if(A[i] = v)
+		       return i
+		if(i > A.length)
+		    return NIL
+循环不变式证明
+   初始化：若A[1] = v，返回，否则数组继续遍历查找
+   保持：每次都在数组中进行查找，保持循环不变式正确
+   终止：当其中有值等于v或数组遍历结束后终止

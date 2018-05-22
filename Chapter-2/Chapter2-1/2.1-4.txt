@@ -1,0 +1,22 @@
+#将2个n位二进制数A，B进行相加，结果存储在n+1位C数组中
+
+#算法描述：
+    循环从低位到高位依次将A，B对应位进行相加，若相加大于2,则进位，将进位信息保存在一个bool变量中，以供下一位相加时加到对应的下一位之和上
+
+
+#伪代码
+BinaryAdd(A[n], B[n], C[n+1])
+		bcarrybit = false
+		for i = n to 1
+		    if(bcarrybit)
+		         temp = A[i] + B[i] + 1
+		    else
+			     temp = A[i] + B[i]
+			C[i] = temp % 2
+			if(temp < 2)
+		          bcarrybit = false
+			else
+			      bcarrybit = true
+         if(temp > 1)
+		    C[1] = 1
+	
