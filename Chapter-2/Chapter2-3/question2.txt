@@ -1,0 +1,10 @@
+# 冒泡排序
+
+/*
+   伪代码：
+   BUBBLESORT(A)
+       for i = 1 to A.length                  //每次排序后数组的前i个值有序
+	       for j = A.length downto i + 1      //每次排序后第i个最小的值将处在第i个位置
+		   if A[j] < A[j - 1] 
+				    exchange A[i] and A[j - 1]
+*/
